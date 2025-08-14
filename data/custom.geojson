@@ -1,0 +1,27 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sample Marker 1",
+        "description": "This is a sample marker."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -122.4194, 37.7749 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sample Marker 2",
+        "description": "This is another sample marker."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -74.0060, 40.7128 ]
+      }
+    }
+  ]
+}
