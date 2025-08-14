@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 0; // 0 means Node.js will automatically find a free port
 
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
@@ -26,5 +26,7 @@ io.on('connection', (socket) => {
 });
 
 server.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    const { port } = server.address();
+    console.log(`Server is running on port ${port}`);
+    console.log(`Please open your browser at http://localhost:${port}`);
 });
